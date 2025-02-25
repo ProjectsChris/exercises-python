@@ -14,3 +14,10 @@ def number_length(num):
     for _ in str(num):
         length += 1
     return length
+
+# We can encode graphs using an adjacency matrix.
+def finding_adjacent_nodes(matrix, row, column):
+    if matrix[row][column] == 1:
+        return True
+    else:
+        return False

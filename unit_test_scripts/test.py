@@ -1,3 +1,4 @@
+import random
 import unittest
 
 from challenges import challenges
@@ -19,3 +20,11 @@ class TestNumberLength(unittest.TestCase):
     def test_number_length(self):
         for i in range(len(self.numbers)):
             self.assertEqual(challenges.number_length(self.numbers[i]), self.length[i])
+
+class TestFindingAdjacentNodes(unittest.TestCase):
+    matrix = [[0, 1, 0, 0], [1, 0, 1, 1], [0, 1, 0, 1], [0, 1, 1, 0]]
+
+    def test_finding_adjacent_nodes(self):
+        self.assertEqual(challenges.finding_adjacent_nodes(self.matrix, 0, 1), True)
+        self.assertEqual(challenges.finding_adjacent_nodes(self.matrix, 0, 2), False)
+        self.assertEqual(challenges.finding_adjacent_nodes(self.matrix, 2, 1), True)
