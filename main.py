@@ -1,4 +1,4 @@
-from unit_test_scripts.test_shift_to_right import *
+from unit_test_scripts.test import *
 
 
 if __name__ == '__main__':
